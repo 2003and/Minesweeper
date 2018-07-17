@@ -71,7 +71,7 @@ def play(mines):
                     screen.blit(tiles[12], [i * tile_size, j * tile_size])
                 elif view_field[i][j] == -2:
                     screen.blit(tiles[field[i][j]], [i * tile_size, j * tile_size])
-                    screen.blit(tiles[11], [i * tile_size, j * tile_size])
+                    # screen.blit(tiles[11], [i * tile_size, j * tile_size])  todo: fix
                 else:
                     screen.blit(tiles[field[i][j]], [i * tile_size, j * tile_size])
         if flags == 0:
