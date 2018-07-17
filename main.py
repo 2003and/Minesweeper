@@ -97,7 +97,7 @@ def check_for_empty(x, y):
             if field[y - 1][x + 1] == 0 and not view_field[y - 1][x + 1] == 0:
                 view_field[y - 1][x + 1] = 0
                 check_for_empty(x + 1, y - 1)
-            if field[y - 1][x + 1] != 1 and not view_field[y - 1][x + 1] == 0:
+            elif field[y - 1][x + 1] != 1 and not view_field[y - 1][x + 1] == 0:
                 view_field[y - 1][x + 1] = 0
     if y - 1 >= 0:
         if field[y - 1][x] == 0 and not view_field[y - 1][x] == 0:
@@ -116,12 +116,14 @@ def check_for_empty(x, y):
         if field[y][x + 1] == 0 and not view_field[y][x + 1] == 0:
             view_field[y][x + 1] = 0
             check_for_empty(x + 1, y)
-        if field[y][x + 1] != 1 and not view_field[y][x + 1] == 0:
+        elif field[y][x + 1] != 1 and not view_field[y][x + 1] == 0:
             view_field[y][x + 1] = 0
     if x - 1 >= 0:
         if field[y][x - 1] == 0 and not view_field[y][x - 1] == 0:
             view_field[y][x - 1] = 0
             check_for_empty(x - 1, y)
+        elif field[y][x - 1] != 1 and not view_field[y][x - 1] == 0:
+            view_field[y][x - 1] = 0
     if y + 1 < scale:
         if x + 1 < scale:
             if field[y + 1][x + 1] == 0 and not field[y + 1][x + 1] == 0:
